@@ -1,0 +1,37 @@
+#about {
+  color: #1c1d24;
+}
+
+.about-me p {
+  font-size: 18px;
+}
+
+.next-btn {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 50%;
+  right: 40px;
+  background-color: #EA2340;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.prev-btn {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 50%;
+  background-color: #EA2340;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.next-btn i,
+.prev-btn i {
+  margin-top: 14px;
+}

@@ -1,0 +1,60 @@
+<div class="main-container" id="main">
+  <div class="profile-container">
+    <div class="container" style="height: 100vh;">
+      <div class="row text-center justify-content-center">
+        <div class="col-md-12 pt-4">
+          <img class="rounded-circle" src="../../assets/img/Logo2.jpg" alt="">
+          <h1 class="name pt-2">RENZO R. CRETECIO</h1>
+          <div class="align-items-center" id="profession">
+            <h5 class="title-1">FRONT-END DEVELOPER</h5>
+            <h5 class="title-2">BACK-END DEVELOPER</h5>
+            <h5 class="title-3">WEB DESIGNER</h5>
+          </div>
+        </div>
+
+        <div class="col-md-12 pt-4">
+          <div class="intro mt-3">
+
+            <div class="custom-list">
+              <div class="icon">
+                <i class="fas fa-graduation-cap fa-1x"></i>
+              </div>
+              <p class="text-left px-4">B.S. in Computer Science (2014-2018)</p>
+            </div>
+            <div class="custom-list">
+              <div class="icon">
+                <i class="fas fa-school fa-1x"></i>
+              </div>
+              <p class="text-left px-4">Pamantasan ng Lungsod ng Muntinlupa</p>
+            </div>
+
+            <div class="custom-list">
+              <div class="icon">
+                <i class="fas fa-home fa-1x"></i>
+              </div>
+              <p class="text-left px-4">Lives in Muntinlupa City</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-10 pt-5">
+          <ul class="links">
+            <li><a href=""><i class="fab fa-github-alt fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-facebook-messenger fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-instagram fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-container" [@routeAnimations]="o && o.activatedRouteData 
+  && o.activatedRouteData['animation']">
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
+  <!-- <div class="content-container">
+    <router-outlet></router-outlet>
+  </div> -->
+</div>

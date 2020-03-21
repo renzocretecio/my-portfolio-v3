@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* #⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣1C1D24
+#EA2340
+#F5EEE6
+#FFFFFF⁣ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 20rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
+  margin: 1em 0;
+  line-height: 1.5;
+}

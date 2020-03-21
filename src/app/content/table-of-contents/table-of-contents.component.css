@@ -1,0 +1,39 @@
+#content-list {
+  color: #1C1D24;
+}
+
+.content-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+.content-list li {
+  margin: 1em;
+  font-size: 2vw;
+}
+
+.content-list li a {
+  font-size: 2vw;
+  color: #EA2340;
+}
+
+.next-btn {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 50%;
+  right: 40px;
+  background-color: #EA2340;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.next-btn i {
+  margin-top: 14px;
+}

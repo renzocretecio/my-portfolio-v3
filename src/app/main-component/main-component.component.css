@@ -1,0 +1,132 @@
+#main {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  color: #F5EEE6;
+}
+
+.profile-container {
+  width: 30%;
+  height: 100vh;
+  background-color: #1C1D24;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.name {
+  font-size: 3vw;
+  font-family: "Blinker", sans-serif;
+  font-weight: 100;
+}
+
+#profession {
+  position: relative;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+#profession h5 {
+  position: absolute;
+  font-size: 1.5vw;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.title-1 {
+  animation-name: anim-1;
+}
+
+.title-2 {
+  animation-name: anim-2;
+}
+
+.title-3 {
+  animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+
+  0%,
+  8.3% {
+    opacity: 0;
+  }
+
+  8.3%,
+  25% {
+    opacity: 1;
+  }
+
+  33.33%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes anim-2 {
+
+  0%,
+  33.33% {
+    opacity: 0;
+  }
+
+  41.63%,
+  58.29% {
+    opacity: 1;
+  }
+
+  66.66%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes anim-3 {
+
+  0%,
+  66.66% {
+    opacity: 0;
+  }
+
+  74.96%,
+  91.62% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  padding-left: 0.5rem;
+  color: #EA2340;
+
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+
+}
+
+.links li {
+  list-style: none;
+}
+
+.links li a {
+  color: #EA2340;
+}
+
+.content-container {
+  width: 70%;
+  height: 100vh;
+  background-color: #ffffff;
+  overflow: hidden;
+}
