@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-table-of-contents',
   templateUrl: './table-of-contents.component.html',
@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableOfContentsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private router: Router) { }
+  nextBtn() {
+    this.router.navigate(['/about'])
+  }
   ngOnInit() {
   }
 

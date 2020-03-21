@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+  nextBtn() {
+    this.router.navigate(['/projects'])
+  }
 
+  prevBtn() {
+    this.router.navigate(['/'])
+  }
   ngOnInit() {
   }
 

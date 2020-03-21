@@ -1,14 +1,20 @@
+#projects {
+  color: #1c1d24;
+  position: relative;
+}
+
 .next-btn {
   position: fixed;
   width: 60px;
   height: 60px;
   bottom: 50%;
-  right: 40px;
+  right: 1%;
   background-color: #EA2340;
   color: #FFF;
   border-radius: 50px;
   text-align: center;
   box-shadow: 2px 2px 3px #999;
+  z-index: 1;
 }
 
 .prev-btn {
@@ -16,11 +22,13 @@
   width: 60px;
   height: 60px;
   bottom: 50%;
+  right: 64.5%;
   background-color: #EA2340;
   color: #FFF;
   border-radius: 50px;
   text-align: center;
   box-shadow: 2px 2px 3px #999;
+  z-index: 1;
 }
 
 .next-btn i,

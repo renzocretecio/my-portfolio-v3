@@ -7,8 +7,9 @@ import { slideInAnimation } from '../route-animation';
   animations: [slideInAnimation]
 })
 export class MainComponent implements OnInit {
-  displayTextH1: string = "";
-
+  public href: string = ''
+  urlCount: number = 0;
+  urlRoute = ['/', '/about', '/projects']
 
   constructor() { }
 
