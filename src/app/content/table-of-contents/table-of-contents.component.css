@@ -34,6 +34,7 @@
   text-align: center;
   box-shadow: 2px 2px 3px #999;
   z-index: 1;
+  transition: all 600ms;
 }
 
 .next-btn i {
