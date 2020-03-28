@@ -1,13 +1,39 @@
-#about {
-  color: #152238;
+#services {
+  color: #1C1D24;
   position: relative;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.icon {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+}
+
+.card {
+  background-color: #bcd2e8;
+  border-radius: 5px;
+  width: 100%;
+  transition: all 300ms;
+  min-height: 200px;
+}
+
+.card:hover {
+  box-shadow: 0 10px 10px 0 #999;
+}
+
+.card-body {
+  padding-left: 7rem;
 }
 
 .next-btn {
   position: fixed;
   width: 60px;
   height: 60px;
-  top: 5%;
+  bottom: 50%;
   right: 1%;
   background-color: #152238;
   color: #FFF;
@@ -23,7 +49,7 @@
   position: fixed;
   width: 60px;
   height: 60px;
-  top: 5%;
+  bottom: 50%;
   right: 64.5%;
   background-color: #152238;
   color: #FFF;
@@ -37,28 +63,4 @@
 .next-btn i,
 .prev-btn i {
   margin-top: 14px;
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
 }

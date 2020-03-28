@@ -3,34 +3,48 @@
   position: relative;
 }
 
+.card {
+  height: 300x;
+  width: 300px;
+  background-color: #bcd2e8;
+}
+
+.card img {
+  object-fit: cover;
+}
+
+.spacing {
+  margin: 2em 0
+}
+
 .next-btn {
   position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 50%;
+  top: 5%;
   right: 1%;
-  background-color: #EA2340;
+  background-color: #152238;
   color: #FFF;
   border-radius: 50px;
   text-align: center;
   box-shadow: 2px 2px 3px #999;
   z-index: 1;
-  animation: fadeInRight 1s;
+  /* animation: fadeInRight 1s; */
 }
 
 .prev-btn {
   position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 50%;
+  top: 5%;
   right: 64.5%;
-  background-color: #EA2340;
+  background-color: #152238;
   color: #FFF;
   border-radius: 50px;
   text-align: center;
   box-shadow: 2px 2px 3px #999;
   z-index: 1;
-  animation: fadeInLeft 1s;
+  /* animation: fadeInLeft 1s; */
 }
 
 .next-btn i,

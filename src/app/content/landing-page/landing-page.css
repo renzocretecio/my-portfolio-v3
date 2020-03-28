@@ -1,0 +1,34 @@
+#home {
+  position: relative;
+  height: 100vh;
+  color: #152238;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  /* text-align: center; */
+
+}
+
+.wrapper h1 {
+  text-transform: capitalize;
+  font-size: 50px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.wrapper p {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.wrapper .btn {
+  font-size: 1em;
+  width: 25%;
+  border: solid #152238 3px;
+  border-radius: 5px;
+  height: 50px;
+  font-weight: 500;
+  font-size: 18px;
+  background-color: #bcd2e8;
+}

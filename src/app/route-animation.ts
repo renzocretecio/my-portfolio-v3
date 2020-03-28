@@ -14,25 +14,9 @@ export const slideInAnimation =
         transition('* => third-page', slideTo('right')),
         transition('first-page => *', slideTo('right')),
         transition('third-page => *', slideTo('left')),
+        // transition('second-page => third-page', slideTo('right')),
+        // transition('third-page => second-page', slideTo('left')),
 
-        // transition('* <=> *', [
-        //     query(':enter, :leave', [
-        //         style({
-        //             position: 'relative',
-        //             left: 0,
-        //             width: '100%',
-        //             opacity: 0,
-        //             transform: 'scale(0) translateY(100%)',
-
-        //         })
-        //     ]),
-        //     query(':enter', [
-        //         animate('600ms ease',
-        //             style({ opacity: 1, transform: 'scale(1) translateY(0)' })
-        //         )
-
-        //     ])
-        // ]),
 
     ]);
 
@@ -44,7 +28,8 @@ function slideTo(direction) {
                 position: 'absolute',
                 top: 0,
                 [direction]: 0,
-                width: '100%'
+                width: '100%',
+
             })
         ], optional),
         query(':enter', [
@@ -52,10 +37,10 @@ function slideTo(direction) {
         ]),
         group([
             query(':leave', [
-                animate('600ms ease', style({ [direction]: '100%' }))
+                animate('600ms 5ms', style({ [direction]: '100%' }))
             ], optional),
             query(':enter', [
-                animate('600ms ease', style({ [direction]: '0%' }))
+                animate('600ms 5ms', style({ [direction]: '0%' }))
             ], optional),
         ])
     ];
