@@ -22,7 +22,11 @@ body {
   min-width: 20rem;
 }
 
-h1,
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+}
+
 h2,
 h3,
 h4,

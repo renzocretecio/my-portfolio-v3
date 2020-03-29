@@ -1,0 +1,29 @@
+#projects {
+  color: #152238;
+  position: relative;
+}
+
+.card {
+  height: 230px;
+  width: 300px;
+  background-color: #152238;
+  color: #bcd2e8;
+}
+
+.card-tlt {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #e6e6e6;
+}
+
+.icon-right i:hover {
+  color: #00d8f7;
+  cursor: pointer;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+.spacing {
+  margin: 2em 0
+}

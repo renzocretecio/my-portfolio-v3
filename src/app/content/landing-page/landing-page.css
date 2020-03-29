@@ -24,11 +24,21 @@
 
 .wrapper .btn {
   font-size: 1em;
-  width: 25%;
-  border: solid #152238 3px;
+  width: 22%;
+  border: solid #152238 2px;
   border-radius: 5px;
-  height: 50px;
   font-weight: 500;
   font-size: 18px;
-  background-color: #bcd2e8;
+  color: #152238;
+  font-family: "Nunito light", sans-serif;
+  transition: all 300ms;
+}
+
+
+
+.wrapper .btn:hover {
+  background-color: #152238;
+  color: #00d8f7;
+
+
 }
