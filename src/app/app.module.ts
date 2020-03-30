@@ -9,6 +9,7 @@ import { LandingPageComponent } from './content/landing-page/landing-page';
 import { AboutMeComponent } from './content/about-me/about-me.component';
 import { ProjectsComponent } from './content/projects/projects.component';
 import { ServicesComponent } from './content/services/services.component';
+import { ContactMeComponent } from './content/contact-me/contact-me.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ServicesComponent } from './content/services/services.component';
     AboutMeComponent,
     ProjectsComponent,
     ServicesComponent,
+    ContactMeComponent,
 
   ],
   imports: [

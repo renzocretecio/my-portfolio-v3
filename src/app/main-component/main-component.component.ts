@@ -7,9 +7,9 @@ import { slideInAnimation } from '../route-animation';
   animations: [slideInAnimation]
 })
 export class MainComponent implements OnInit {
-  public href: string = ''
-  urlCount: number = 0;
-  urlRoute = ['/', '/about', '/projects']
+
+  date = new Date()
+  year = this.date.getFullYear()
 
   constructor() { }
 

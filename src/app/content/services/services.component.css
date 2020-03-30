@@ -20,12 +20,9 @@
   width: 100%;
   transition: all 300ms;
   min-height: 200px;
+  box-shadow: 0 15px 10px 0 #999;
 }
 
-.card:hover {
-  box-shadow: 0 15px 10px 10px #999;
-  cursor: pointer;
-}
 
 .card-body {
   padding-left: 7rem;

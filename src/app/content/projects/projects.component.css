@@ -15,7 +15,11 @@
   color: #e6e6e6;
 }
 
-.icon-right i:hover {
+.icon-right a {
+  color: #bcd2e8;
+}
+
+.icon-right a:hover {
   color: #00d8f7;
   cursor: pointer;
 }
@@ -25,5 +29,5 @@
 }
 
 .spacing {
-  margin: 2em 0
+  margin: 1em 0
 }

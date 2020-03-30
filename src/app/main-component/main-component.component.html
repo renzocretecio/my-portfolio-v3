@@ -1,51 +1,27 @@
 <div class="main-container" id="main">
   <div class="profile-container">
-    <div class="container" style="height: 100vh;">
-      <div class="row text-center justify-content-center">
-        <div class="col-md-12 pt-4">
-          <img class="rounded-circle" src="../../assets/img/Logo2.jpg" alt="">
+    <div class="container">
+      <div class="d-flex flex-md-column justify-content-between" style="height: 100vh;">
+
+        <div class="pt-4 text-center">
+          <img class="rounded-circle my-3" src="../../assets/img/Logo2.jpg" alt="Display photo">
           <h1 class="name pt-2">RENZO R. CRETECIO</h1>
-          <div class="align-items-center" id="profession">
+          <div class="align-items-center mt-3 mb-5" id="profession">
             <h5 class="title-1">FRONT-END DEVELOPER</h5>
             <h5 class="title-2">BACK-END DEVELOPER</h5>
             <h5 class="title-3">WEB DESIGNER</h5>
           </div>
-        </div>
-
-        <div class="col-md-12 pt-4">
-          <div class="intro mt-3">
-
-            <div class="custom-list">
-              <div class="icon">
-                <i class="fas fa-graduation-cap fa-lg"></i>
-              </div>
-              <p class="text-left ml-4">B.S. in Computer Science (2014-2018)</p>
-            </div>
-            <div class="custom-list">
-              <div class="icon">
-                <i class="fas fa-school fa-lg"></i>
-              </div>
-              <p class="text-left ml-4">Pamantasan ng Lungsod ng Muntinlupa</p>
-            </div>
-
-            <div class="custom-list">
-              <div class="icon">
-                <i class="fas fa-home fa-lg"></i>
-              </div>
-              <p class="text-left ml-4">Lives in Muntinlupa City</p>
-            </div>
-
+          <div class="page-control text-center d-flex flex-md-column">
+            <a [routerLink]="['/about']">ABOUT</a>
+            <a [routerLink]="['/projects']">RECENT WORKS</a>
+            <a [routerLink]="['/contact']">CONTACT ME</a>
           </div>
         </div>
 
-        <div class="col-md-10 pt-5">
-          <div class="links">
-            <a target="_black" class="icon-btn fab fa-github-alt" href="https://github.com/creteciorenzo"></a>
-            <a target="_black" class="icon-btn fab fa-facebook-messenger"
-              href="https://www.messenger.com/t/creteciorenzo"></a>
-            <a target="_black" class="icon-btn fab fa-instagram" href="https://www.instagram.com/xromanticgarbage/"></a>
-            <a target="_black" class="icon-btn fab fa-linkedin-in"
-              href="https://www.linkedin.com/in/renzo-cretecio-a0b96616b/"></a>
+
+        <div class="py-3">
+          <div class="footer text-center">
+            <footer>Renzo R. Cretecio &copy; {{year}}</footer>
           </div>
         </div>
       </div>
