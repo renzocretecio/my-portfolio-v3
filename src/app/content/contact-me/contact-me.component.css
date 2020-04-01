@@ -105,11 +105,18 @@
 }
 
 @media only screen and (max-width: 30rem) {
+  .responsive {
+    width: 100% !important;
+  }
+
   .section-1 h1 {
     font-size: 7vw;
   }
 
-  .section-1 p,
+  .section-1 p {
+    text-align: justify;
+  }
+
   .form-contact label {
     font-size: 4vw;
   }
