@@ -204,7 +204,9 @@
   }
 
   .nav-bar {
+    position: relative;
     display: block;
+    top: 0;
   }
 
   .nav-container {
