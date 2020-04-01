@@ -24,6 +24,10 @@
 
 }
 
+.textarea {
+  padding-top: 10px;
+}
+
 .btn-round {
   border: solid #152238 2px;
   border-radius: 25px;
@@ -101,6 +105,14 @@
   .responsive {
     display: flex;
     flex-direction: column;
+  }
+
+  .spacing {
+    margin: 10px 0;
+  }
+
+  .textarea {
+    padding-top: 0;
   }
 }
 
