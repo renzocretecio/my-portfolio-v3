@@ -1,30 +1,40 @@
 <div class="contact" id="contactMe">
   <div class="container">
-    <div class="d-flex flex-md-column w-75 mx-auto justify-content-between" style="height: 100vh;">
-      <section class="mt-5 ">
+    <div class="d-flex flex-md-column w-75 mx-auto justify-content-between responsive" style="height: 100vh;">
+      <section class="mt-5 section-1">
         <h1 class="text-center">get in touch</h1>
-        <p>If you want to get in touch, talk about a project or just say hi, send me a message or send an email to <a
-            href="">renzocretecio@gmail.com</a></p>
+        <p>If you want to get in touch or talk about a project, send me a message or send an email to
+          <a target="_top" href="mailto:renzocretecio@gmail.com"><strong>renzocretecio@gmail.com</strong></a></p>
       </section>
 
-      <form action="submit">
-        <div class="form-row">
-          <div class="col">
+      <form>
+        <div class="row justify-content-between form-contact">
+          <div class="col-md-6">
             <label for="name">Name</label>
-            <input class="form-control-lg">
+            <input class="form-control form-control-lg" type="text" id="name">
           </div>
-
+          <div class="col-md-6">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control form-control-lg" id="email">
+          </div>
+          <div class="col-md-12 mt-3">
+            <label for="message">How can I help?</label>
+            <textarea id="message" class="form-control" rows="4"></textarea>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end py-3">
+          <a class="btn-round btn" type="button">Submit</a>
         </div>
       </form>
 
       <section>
         <h4 class="text-center">links</h4>
         <div class="links">
-          <a target="_black" class="icon-btn fab fa-github-alt" href="https://github.com/creteciorenzo"></a>
-          <a target="_black" class="icon-btn fab fa-facebook-messenger"
+          <a target="_blank" class="icon-btn fab fa-github-alt" href="https://github.com/creteciorenzo"></a>
+          <a target="_blank" class="icon-btn fab fa-facebook-messenger"
             href="https://www.messenger.com/t/creteciorenzo"></a>
-          <a target="_black" class="icon-btn fab fa-instagram" href="https://www.instagram.com/xromanticgarbage/"></a>
-          <a target="_black" class="icon-btn fab fa-linkedin-in"
+          <a target="_blank" class="icon-btn fab fa-instagram" href="https://www.instagram.com/xromanticgarbage/"></a>
+          <a target="_blank" class="icon-btn fab fa-linkedin-in"
             href="https://www.linkedin.com/in/renzo-cretecio-a0b96616b/"></a>
         </div>
       </section>

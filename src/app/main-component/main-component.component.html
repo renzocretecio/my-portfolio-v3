@@ -1,20 +1,43 @@
 <div class="main-container" id="main">
+
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="btn-list">
+      <a class="text-left" type="button" [routerLink]="['/']">HOME</a>
+      <a class="text-left" type="button" [routerLink]="['/about']">ABOUT</a>
+      <a class="text-left" type="button" [routerLink]="['/projects']">RECENT WORKS</a>
+      <a class="text-left" type="button" [routerLink]="['/contact']">CONTACT</a>
+    </div>
+
+
+  </nav>
+
+
   <div class="profile-container">
     <div class="container">
       <div class="d-flex flex-md-column justify-content-between" style="height: 100vh;">
 
-        <div class="pt-4 text-center">
-          <img class="rounded-circle my-3" src="../../assets/img/Logo2.jpg" alt="Display photo">
-          <h1 class="name pt-2">RENZO R. CRETECIO</h1>
-          <div class="align-items-center mt-3 mb-5" id="profession">
-            <h5 class="title-1">FRONT-END DEVELOPER</h5>
-            <h5 class="title-2">BACK-END DEVELOPER</h5>
-            <h5 class="title-3">WEB DESIGNER</h5>
+        <div class="pt-4 text-center anim">
+          <div [routerLink]="['/']" class="home">
+            <img class="rounded-circle my-3" src="../../assets/img/Logo2.jpg" alt="Display photo">
+            <h1 class="name pt-2">RENZO R. CRETECIO</h1>
+            <div class="align-items-center mt-3 mb-5" id="profession">
+              <h5 class="title-1">FRONT-END DEVELOPER</h5>
+              <h5 class="title-2">BACK-END DEVELOPER</h5>
+              <h5 class="title-3">WEB DESIGNER</h5>
+            </div>
           </div>
+
           <div class="page-control text-center d-flex flex-md-column">
             <a [routerLink]="['/about']">ABOUT</a>
             <a [routerLink]="['/projects']">RECENT WORKS</a>
-            <a [routerLink]="['/contact']">CONTACT ME</a>
+            <a [routerLink]="['/contact']">CONTACT</a>
           </div>
         </div>
 
@@ -32,4 +55,8 @@
   && o.activatedRouteData['animation']">
     <router-outlet #o="outlet"></router-outlet>
   </div>
+  <!-- <div class="content-container">
+    <router-outlet></router-outlet>
+  </div> -->
+
 </div>

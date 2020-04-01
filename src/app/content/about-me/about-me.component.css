@@ -2,3 +2,26 @@
   color: #152238;
   position: relative;
 }
+
+@media only screen and (max-width: 62rem) {
+
+  .about-me h1 {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+
+  .about-me h1 {
+    font-size: 6vw;
+  }
+
+
+}
+
+@media only screen and (max-width: 30rem) {
+
+  .about-me h1 {
+    font-size: 8vw;
+  }
+}

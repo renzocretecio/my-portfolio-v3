@@ -15,6 +15,11 @@
   color: #e6e6e6;
 }
 
+.card-body footer {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+}
+
 .icon-right a {
   color: #bcd2e8;
 }
@@ -25,9 +30,32 @@
 }
 
 .footer-text {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
   font-size: 14px;
 }
 
 .spacing {
   margin: 1em 0
+}
+
+@media only screen and (max-width: 62rem) {
+
+  .page-title {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+
+  .page-title {
+    font-size: 6vw;
+  }
+}
+
+@media only screen and (max-width: 30rem) {
+
+  .page-title {
+    font-size: 8vw;
+  }
 }

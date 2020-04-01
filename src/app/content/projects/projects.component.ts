@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
-import * as $ from 'jquery'
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -9,6 +9,7 @@ import * as $ from 'jquery'
 export class ProjectsComponent implements OnInit {
 
   constructor(private router: Router) { }
+
   nextBtn() {
     this.router.navigate(['/about'])
   }

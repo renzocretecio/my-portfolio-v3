@@ -10,6 +10,7 @@ import { AboutMeComponent } from './content/about-me/about-me.component';
 import { ProjectsComponent } from './content/projects/projects.component';
 import { ServicesComponent } from './content/services/services.component';
 import { ContactMeComponent } from './content/contact-me/contact-me.component';
+import { ResumeComponent } from './content/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,16 @@ import { ContactMeComponent } from './content/contact-me/contact-me.component';
     ProjectsComponent,
     ServicesComponent,
     ContactMeComponent,
+    ResumeComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

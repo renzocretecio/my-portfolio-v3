@@ -2,6 +2,44 @@
   color: #152238;
 }
 
+.section-1 a {
+  text-decoration: none;
+  color: #152238;
+  cursor: pointer;
+}
+
+.section-1 a:hover {
+  color: #00d8f7;
+}
+
+.form-contact label,
+.btn {
+  font-size: 18px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.form-control:focus {
+  border-color: #152238;
+  box-shadow: 0 0 5px #1522382f;
+
+}
+
+.btn-round {
+  border: solid #152238 2px;
+  border-radius: 25px;
+  background-color: #152238;
+  color: #bcd2e8;
+  width: 5em;
+  height: 3rem;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.btn-round:hover {
+  background-color: #e6e6e6;
+  color: #152238;
+}
 
 .links {
   display: flex;
@@ -51,5 +89,33 @@
 .icon-btn:hover {
   border: 2px solid #152238;
   color: #152238;
+
+}
+
+@media only screen and (max-width: 48rem) {
+
+  .section-1 h1 {
+    font-size: 6vw;
+  }
+
+  .responsive {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 30rem) {
+  .section-1 h1 {
+    font-size: 7vw;
+  }
+
+  .section-1 p,
+  .form-contact label {
+    font-size: 4vw;
+  }
+
+  .icon-btn {
+    margin: 5px;
+  }
 
 }

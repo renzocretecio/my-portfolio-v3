@@ -1,19 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import { slideInAnimation } from '../route-animation';
+import { slideInAnimation, fader, } from '../route-animation';
+import * as $ from 'jquery'
+
 @Component({
   selector: 'app-main-component',
   templateUrl: './main-component.component.html',
   styleUrls: ['./main-component.component.css'],
-  animations: [slideInAnimation]
+  animations: [fader]
 })
 export class MainComponent implements OnInit {
 
   date = new Date()
   year = this.date.getFullYear()
 
+  burgerToggle() {
+    $('.hamburger').click(() => {
+      $('.btn-list').toggleClass('active')
+    })
+
+    $('.btn-list a').click(() => {
+      $('.btn-list').toggleClass('active')
+    })
+  }
+
   constructor() { }
 
   ngOnInit() {
+    this.burgerToggle()
   }
 
 }
