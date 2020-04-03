@@ -11,7 +11,7 @@ import { ProjectsComponent } from './content/projects/projects.component';
 import { ServicesComponent } from './content/services/services.component';
 import { ContactMeComponent } from './content/contact-me/contact-me.component';
 import { ResumeComponent } from './content/resume/resume.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +28,7 @@ import { ResumeComponent } from './content/resume/resume.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule
 
   ],
 
