@@ -7,19 +7,22 @@
           <a target="_top" href="mailto:renzocretecio@gmail.com"><strong>renzocretecio@gmail.com</strong></a></p>
       </section>
 
-      <form [formGroup]="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form [formGroup]="contactForm" id="contact" (ngSubmit)="onSubmit()" method="POST" netlify
+        netlify-honeypot=”bot-field”>
         <div class="row justify-content-between form-contact">
           <div class="col-md-6 spacing">
             <label for="name">Name</label>
-            <input name="name" class="form-control form-control-lg" type="text" id="name" required>
+            <input formControlName="name" name="name" class="form-control form-control-lg" type="text" id="name"
+              required>
           </div>
           <div class="col-md-6 spacing">
             <label for="email">Email address</label>
-            <input name="email" type="email" class="form-control form-control-lg" id="email" required>
+            <input formControlName="email" name="email" type="email" class="form-control form-control-lg" id="email"
+              required>
           </div>
           <div class="col-md-12 spacing textarea">
             <label for="message">How can I help?</label>
-            <textarea name="message" id="message" class="form-control" rows="4"></textarea>
+            <textarea formControlName="message" name="message" id="message" class="form-control" rows="4"></textarea>
           </div>
         </div>
         <div class="d-flex justify-content-end py-3">

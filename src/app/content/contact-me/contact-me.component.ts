@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ContactForm } from './ObjectModel'
+import { HttpClient, HttpParams } from '@angular/common/http';
 import * as moment from 'moment';
 @Component({
   selector: 'app-contact-me',
@@ -9,12 +10,6 @@ import * as moment from 'moment';
 })
 export class ContactMeComponent implements OnInit {
   contactFormObject: ContactForm
-  name: string = ""
-  email: string = ''
-  message: string = ''
-  date: string = ''
-  time: string = ''
-  statusFlag: string = ''
 
   contactForm = this.fb.group({
     name: ['', Validators.required],
@@ -22,28 +17,19 @@ export class ContactMeComponent implements OnInit {
     message: ['']
 
   })
-  setContactData() {
-    this.contactFormObject = new ContactForm()
-    this.contactFormObject.name = this.name
-    this.contactFormObject.emailAdress = this.email
-    this.contactFormObject.message = this.message
-    this.contactFormObject.date = this.date
-    this.contactFormObject.time = this.time
-    this.contactFormObject.statusFlag = this.statusFlag
-  }
-  onSubmit() {
-    this.name = this.contactForm.controls['name'].value
-    this.email = this.contactForm.controls['email'].value
-    this.message = this.contactForm.controls['message'].value
-    this.date = moment(new Date).format('MMM DD, YYYY')
-    this.time = moment(new Date).format('h:mm:ss a')
-    this.statusFlag = 'Active'
-    this.setContactData()
-    var dataObject = this.contactFormObject
 
-    console.log(JSON.stringify(dataObject))
+  onSubmit() {
+    const body = new HttpParams()
+      .set('form-name', 'contact')
+      .append('name', this.contactForm.value.name)
+      .append('name', this.contactForm.value.email)
+      .append('name', this.contactForm.value.message)
+    this.http.post('/', body.toString(), { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).subscribe(
+      res => { }
+    )
+
   }
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
 
   }
 
