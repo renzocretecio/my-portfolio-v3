@@ -24,7 +24,7 @@ export const fader =
             ]),
             query(':enter', [
                 animate('1s ease', style({ opacity: 1, transform: 'scale(1) translateY(0)' }))
-            ])
+            ], { optional: true })
         ])
     ])
 
