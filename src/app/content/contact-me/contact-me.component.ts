@@ -59,6 +59,7 @@ export class ContactMeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.onSubmit()
   }
 
 }
