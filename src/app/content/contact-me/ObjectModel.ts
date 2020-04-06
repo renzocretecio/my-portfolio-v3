@@ -1,8 +1,5 @@
 export class ContactForm {
     name: string;
-    emailAdress: string
+    emailAddress: string
     message: string
-    date: string
-    time: string
-    statusFlag: string
 }

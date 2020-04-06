@@ -7,26 +7,29 @@
           <a target="_top" href="mailto:renzocretecio@gmail.com"><strong>renzocretecio@gmail.com</strong></a></p>
       </section>
 
-      <form [formGroup]="contactForm" name="contact" id="contact" (ngSubmit)="onSubmit()" method="POST"
-        data-netlify="true">
+      <form [formGroup]="form" name="contact" id="contact" (ngSubmit)="onSubmit()" method="POST">
         <div class="row justify-content-between form-contact">
           <div class="col-md-6 spacing">
             <label for="name">Name</label>
             <input formControlName="name" name="name" class="form-control form-control-lg" type="text" id="name"
               required>
+
           </div>
           <div class="col-md-6 spacing">
-            <label for="email">Email address</label>
+            <label for="email">E-mail</label>
             <input formControlName="email" name="email" type="email" class="form-control form-control-lg" id="email"
-              required>
+              [ngClass]="{'has-error': email.invalid}" required>
+            <!-- <code *ngIf="email.errors.required" style="color: red !important;">Invalid
+              email</code> -->
           </div>
           <div class="col-md-12 spacing textarea">
             <label for="message">How can I help?</label>
             <textarea formControlName="message" name="message" id="message" class="form-control" rows="4"></textarea>
           </div>
         </div>
+        <div>{{form.status}}</div>
         <div class="d-flex justify-content-end py-3">
-          <button value="send" id="submit-form" class="btn-round btn" type="submit">Submit</button>
+          <button id="submit-form" class="btn-round btn" type="submit">Submit</button>
         </div>
       </form>
 

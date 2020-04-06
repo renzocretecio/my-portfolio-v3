@@ -19,9 +19,14 @@
 }
 
 .form-control:focus {
-  border-color: #152238;
-  box-shadow: 0 0 5px #1522382f;
+  border: 2px solid #152238 !important;
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0) !important;
 
+}
+
+.form-control[type="email"].has-error,
+.form-control[type="text"].has-error {
+  border: 2px solid #E51C23 !important;
 }
 
 .textarea {

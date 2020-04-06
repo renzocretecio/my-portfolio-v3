@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+// const API_URl = 'http://localhost:5000/api'
+const API_URl = 'https://nodemailer-express.herokuapp.com/api'
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  postData(data: any) {
+    return this.http.post(`${API_URl}/contact`, data)
+  }
 }
