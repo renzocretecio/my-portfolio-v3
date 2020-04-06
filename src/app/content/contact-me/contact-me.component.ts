@@ -42,7 +42,9 @@ export class ContactMeComponent implements OnInit {
     if (this.form.invalid) {
       $('.form-control').addClass('has-error')
     } else {
-      this.service.postData(data).subscribe()
+      this.service.postData(data).subscribe(data => {
+
+      })
     }
 
   }
