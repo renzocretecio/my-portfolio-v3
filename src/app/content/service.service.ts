@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-// const API_URl = 'http://localhost:5000/api'
-const API_URl = 'https://nodemailer-express.herokuapp.com/api'
+// const API_URl = 'http://localhost:5000'
+const API_URl = 'https://nodemailer-express.herokuapp.com'
 @Injectable({
   providedIn: 'root'
 })
