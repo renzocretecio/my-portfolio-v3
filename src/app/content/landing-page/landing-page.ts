@@ -17,9 +17,9 @@ export class LandingPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.pageTitle = 'Renzo R. Cretecio | Web developer'
+    this.pageTitle = "I'm a PH based Web designer and Developer focused on user-friendly interface"
     this.title.setTitle(this.pageTitle)
-    this.meta.addTag({ description: " I'm a PH based Web designer and Developer focused on user-friendly interface" })
+    this.meta.addTag({ Description: " I'm a PH based Web designer and Developer focused on user-friendly interface" })
   }
 
 }
