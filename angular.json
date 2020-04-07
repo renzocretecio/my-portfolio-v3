@@ -20,9 +20,23 @@
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
-              "src/favicon.ico",
               "src/assets",
-              "src/_redirects"
+              "src/_redirects",
+              "src/favicons/android-icon-144x144.png",
+              "src/favicons/apple-icon-60x60.png",
+              "src/favicons/apple-icon-72x72.png",
+              "src/favicons/apple-icon-76x76.png",
+              "src/favicons/apple-icon-120x120.png",
+              "src/favicons/apple-icon-144x144.png",
+              "src/favicons/apple-icon-152x152.png",
+              "src/favicons/apple-icon-180x180.png",
+              "src/favicons/android-icon-192x192.png",
+              "src/favicons/favicon-32x32.png",
+              "src/favicons/favicon-96x96.png",
+              "src/favicons/favicon-16x16.png",
+              "src/favicons/favicon-16x16.png",
+              "src/favicons/manifest.json",
+              "src/favicons/ms-icon-144x144.png"
             ],
             "styles": [
               "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
@@ -128,12 +142,10 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "src/environments/environment.ts",
+                "with": "src/environments/environment.prod.ts"
+              }],
               "sourceMap": false,
               "optimization": {
                 "scripts": false,

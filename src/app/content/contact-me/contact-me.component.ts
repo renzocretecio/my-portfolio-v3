@@ -7,6 +7,7 @@ import * as $ from 'jquery'
 import { ServiceService } from '../service.service'
 import { forbiddenNameValidator } from '../shared/input.validators'
 import { from } from 'rxjs';
+import { Title, Meta } from '@angular/platform-browser'
 @Component({
   selector: 'app-contact-me',
   templateUrl: './contact-me.component.html',
@@ -17,6 +18,8 @@ export class ContactMeComponent implements OnInit {
   name: string = ''
   email: string = ''
   message: string = ''
+
+  pageTitle: string
 
   form = this.fb.group({
     name: ['', [Validators.required]],
@@ -48,11 +51,13 @@ export class ContactMeComponent implements OnInit {
     }
 
   }
-  constructor(private http: HttpClient, private fb: FormBuilder, private service: ServiceService) {
+  constructor(private http: HttpClient, private fb: FormBuilder, private service: ServiceService, private title: Title, private meta: Meta) {
 
   }
 
   ngOnInit() {
+    this.pageTitle = 'Renzo R. Cretecio | Contact'
+    this.title.setTitle(this.pageTitle)
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
+import { Title, Meta } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-projects',
@@ -7,8 +8,8 @@ import { Router } from '@angular/router'
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  pageTitle: string
+  constructor(private router: Router, private title: Title, private meta: Meta) { }
 
   nextBtn() {
     this.router.navigate(['/about'])
@@ -18,7 +19,8 @@ export class ProjectsComponent implements OnInit {
     this.router.navigate(['/'])
   }
   ngOnInit() {
-
+    this.pageTitle = 'Renzo R. Cretecio | Projects'
+    this.title.setTitle(this.pageTitle)
   }
 
 }
