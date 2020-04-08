@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
-import { Title, Meta } from '@angular/platform-browser'
-
+import { MetaServiceService } from '../../meta-service.service'
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -9,18 +7,13 @@ import { Title, Meta } from '@angular/platform-browser'
 })
 export class ProjectsComponent implements OnInit {
   pageTitle: string
-  constructor(private router: Router, private title: Title, private meta: Meta) { }
-
-  nextBtn() {
-    this.router.navigate(['/about'])
+  constructor(private meta: MetaServiceService) {
+    this.meta.setupRouting();
   }
 
-  prevBtn() {
-    this.router.navigate(['/'])
-  }
+
   ngOnInit() {
-    this.pageTitle = 'Renzo R. Cretecio | Projects'
-    this.title.setTitle(this.pageTitle)
+
   }
 
 }

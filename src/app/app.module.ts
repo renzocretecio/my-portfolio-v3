@@ -13,6 +13,7 @@ import { ContactMeComponent } from './content/contact-me/contact-me.component';
 import { ResumeComponent } from './content/resume/resume.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SeoSocialShareDataService } from './seo-service/seo-social-share-data.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,11 +31,12 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+
 
   ],
 
-  providers: [],
+  providers: [SeoSocialShareDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

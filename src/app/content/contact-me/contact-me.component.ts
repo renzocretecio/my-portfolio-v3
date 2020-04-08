@@ -2,12 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { ContactForm } from './ObjectModel'
 import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http';
-import * as moment from 'moment';
 import * as $ from 'jquery'
 import { ServiceService } from '../service.service'
-import { forbiddenNameValidator } from '../shared/input.validators'
-import { from } from 'rxjs';
-import { Title, Meta } from '@angular/platform-browser'
+import { MetaServiceService } from '../../meta-service.service'
 @Component({
   selector: 'app-contact-me',
   templateUrl: './contact-me.component.html',
@@ -19,7 +16,6 @@ export class ContactMeComponent implements OnInit {
   email: string = ''
   message: string = ''
 
-  pageTitle: string
 
   form = this.fb.group({
     name: ['', [Validators.required]],
@@ -51,13 +47,13 @@ export class ContactMeComponent implements OnInit {
     }
 
   }
-  constructor(private http: HttpClient, private fb: FormBuilder, private service: ServiceService, private title: Title, private meta: Meta) {
-
+  constructor(private http: HttpClient, private fb: FormBuilder, private service: ServiceService, private meta: MetaServiceService) {
+    this.meta.setupRouting();
   }
 
   ngOnInit() {
-    this.pageTitle = 'Renzo R. Cretecio | Contact'
-    this.title.setTitle(this.pageTitle)
+
+
   }
 
 }
