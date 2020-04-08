@@ -13,6 +13,7 @@ export class SeoSocialShareDataService {
   public setData(data: SocialShareData) {
     this.setTitle(data.title)
     this.setDescription(data.description)
+    this.setImage(data.image)
   }
 
   private setTitle(title: string = '') {
@@ -41,6 +42,18 @@ export class SeoSocialShareDataService {
       this.metaService.removeTag(`name='twitter:description'`);
       this.metaService.removeTag(`property='og:description'`);
       this.metaService.removeTag(`name='description'`);
+    }
+  }
+
+  public setImage(image?: string) {
+    if (image && image.length) {
+      this.metaService.updateTag({ name: 'twitter:image', content: image });
+      this.metaService.updateTag({ property: 'og:image', content: image });
+      this.metaService.updateTag({ property: 'og:image:height', content: '630' });
+    } else {
+      this.metaService.removeTag(`name='twitter:image'`);
+      this.metaService.removeTag(`property='og:image'`);
+      this.metaService.removeTag(`property='og:image:height'`);
     }
   }
 }

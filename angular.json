@@ -36,7 +36,9 @@
               "src/favicons/favicon-16x16.png",
               "src/favicons/favicon-16x16.png",
               "src/favicons/manifest.json",
-              "src/favicons/ms-icon-144x144.png"
+              "src/favicons/ms-icon-144x144.png",
+              "src/sitemap.xml",
+              "src/robots.txt"
             ],
             "styles": [
               "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
