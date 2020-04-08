@@ -35,8 +35,7 @@ import { BrowserJsonldModule } from './JSON-LD/browser-jsonld/browser-jsonld.mod
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ServerJsonldModule,
-    BrowserJsonldModule
+
   ],
 
   providers: [SeoSocialShareDataService],
