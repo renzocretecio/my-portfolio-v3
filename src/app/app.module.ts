@@ -14,6 +14,9 @@ import { ResumeComponent } from './content/resume/resume.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SeoSocialShareDataService } from './seo-service/seo-social-share-data.service'
+import { ServerJsonldModule } from './JSON-LD/server-jsonld/server-jsonld.module';
+import { BrowserJsonldModule } from './JSON-LD/browser-jsonld/browser-jsonld.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +35,8 @@ import { SeoSocialShareDataService } from './seo-service/seo-social-share-data.s
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
-
+    ServerJsonldModule,
+    BrowserJsonldModule
   ],
 
   providers: [SeoSocialShareDataService],

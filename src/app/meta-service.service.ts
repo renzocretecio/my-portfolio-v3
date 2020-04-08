@@ -31,8 +31,12 @@ export class MetaServiceService {
       filter(route => route.outlet === 'primary')
     ).subscribe((route: ActivatedRoute) => {
       const seo = route.snapshot.data['seo'];
+      const jsonLd = {
+        name: seo.title,
+        url: 'https://creteciorenzo.netlify.com/' + this.router.routerState.snapshot.url,
+      };
       // set your meta tags & title here
-      this.seoSocialShareDataService.setData(seo);
+      this.seoSocialShareDataService.setData(seo, 'Website', jsonLd);
     });
 
 

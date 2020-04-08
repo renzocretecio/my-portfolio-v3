@@ -2,18 +2,20 @@ import { Injectable } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser'
 import { SocialShareData } from './share-data/social-share-data'
 
+
 Injectable({
   providedIn: 'root'
 })
 export class SeoSocialShareDataService {
-
+  private jsonLd: any = {};
   constructor(private readonly metaService: Meta,
     private readonly titleService: Title) { }
 
-  public setData(data: SocialShareData) {
+  public setData(data: SocialShareData, type: string, rawData: any) {
     this.setTitle(data.title)
     this.setDescription(data.description)
     this.setImage(data.image)
+    this.jsonLd = this.getObject(type, rawData)
   }
 
   private setTitle(title: string = '') {
@@ -56,4 +58,19 @@ export class SeoSocialShareDataService {
       this.metaService.removeTag(`property='og:image:height'`);
     }
   }
+  getObject(type: string, rawData?: any) {
+    let object = {
+      '@context': 'http://schema.org',
+      '@type': type,
+    };
+    if (rawData) {
+      object = Object.assign({}, object, rawData);
+    }
+    return object;
+  }
+
+  toJson() {
+    return JSON.stringify(this.jsonLd);
+  }
+
 }
