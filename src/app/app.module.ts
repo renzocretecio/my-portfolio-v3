@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-
+import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main-component/main-component.component';
@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SeoSocialShareDataService } from './seo-service/seo-social-share-data.service'
 import { ServerJsonldModule } from './JSON-LD/server-jsonld/server-jsonld.module';
 import { BrowserJsonldModule } from './JSON-LD/browser-jsonld/browser-jsonld.module';
+import { BrowserTransferStateModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -33,9 +34,11 @@ import { BrowserJsonldModule } from './JSON-LD/browser-jsonld/browser-jsonld.mod
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
+    BrowserTransferStateModule,
     ReactiveFormsModule,
     HttpClientModule,
 
+    BrowserJsonldModule,
   ],
 
   providers: [SeoSocialShareDataService],

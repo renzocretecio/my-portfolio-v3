@@ -3,6 +3,7 @@ import { Title, Meta } from '@angular/platform-browser';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs/operators';
 import { SeoSocialShareDataService } from './seo-service/seo-social-share-data.service'
+import { JsonLdService } from './JSON-LD/json-ld.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,8 @@ export class MetaServiceService {
     private meta: Meta,
     private readonly router: Router,
     private readonly activatedRoute: ActivatedRoute,
-    private readonly seoSocialShareDataService: SeoSocialShareDataService) {
+    private readonly seoSocialShareDataService: SeoSocialShareDataService,
+    private readonly jsonLdService: JsonLdService) {
 
   }
 
@@ -33,10 +35,11 @@ export class MetaServiceService {
       const seo = route.snapshot.data['seo'];
       const jsonLd = {
         name: seo.title,
-        url: 'https://creteciorenzo.netlify.com/' + this.router.routerState.snapshot.url,
+        url: `https://creteciorenzo.netlify.com${this.router.routerState.snapshot.url}`,
       };
       // set your meta tags & title here
-      this.seoSocialShareDataService.setData(seo, 'Website', jsonLd);
+      this.seoSocialShareDataService.setData(seo);
+      this.jsonLdService.setData('Website', jsonLd);
     });
 
 

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, CommonModule } from '@angular/common';
 import { BEFORE_APP_SERIALIZED } from '@angular/platform-server';
-import { SeoSocialShareDataService } from '../../seo-service/seo-social-share-data.service'
+import { JsonLdService } from '../json-ld.service'
 
-export function serializeJsonLdFactory(doc: Document, jsonLdService: SeoSocialShareDataService) {
+export function serializeJsonLdFactory(doc: Document, jsonLdService: JsonLdService) {
   const serializeAndInject = function () {
     const script = doc.createElement('script');
     script.setAttribute('type', 'application/ld+json');
@@ -15,10 +15,10 @@ export function serializeJsonLdFactory(doc: Document, jsonLdService: SeoSocialSh
 
 @NgModule({
   providers: [
-    SeoSocialShareDataService, {
+    JsonLdService, {
       provide: BEFORE_APP_SERIALIZED,
       useFactory: serializeJsonLdFactory,
-      deps: [DOCUMENT, SeoSocialShareDataService],
+      deps: [DOCUMENT, JsonLdService],
       multi: true,
     },
   ],
