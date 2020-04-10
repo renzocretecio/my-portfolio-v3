@@ -15,7 +15,7 @@ export class ContactMeComponent implements OnInit {
   name: string = ''
   email: string = ''
   message: string = ''
-
+  isSent: boolean = false
 
   form = this.fb.group({
     name: ['', [Validators.required]],
@@ -40,10 +40,13 @@ export class ContactMeComponent implements OnInit {
     var data = this.contactForm
     if (this.form.invalid) {
       $('.form-control').addClass('has-error')
+
     } else {
       this.service.postData(data).subscribe(data => {
 
       })
+      this.isSent = true
+      this.form.reset()
     }
 
   }
