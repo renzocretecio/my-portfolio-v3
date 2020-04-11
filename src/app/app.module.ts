@@ -17,6 +17,7 @@ import { SeoSocialShareDataService } from './seo-service/seo-social-share-data.s
 import { ServerJsonldModule } from './JSON-LD/server-jsonld/server-jsonld.module';
 import { BrowserJsonldModule } from './JSON-LD/browser-jsonld/browser-jsonld.module';
 import { BrowserTransferStateModule } from '@angular/platform-browser';
+import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { BrowserTransferStateModule } from '@angular/platform-browser';
     ServicesComponent,
     ContactMeComponent,
     ResumeComponent,
+    PageNotfoundComponent,
 
   ],
   imports: [

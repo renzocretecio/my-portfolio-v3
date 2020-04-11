@@ -6,6 +6,7 @@ import { LandingPageComponent } from './content/landing-page/landing-page';
 import { AboutMeComponent } from './content/about-me/about-me.component';
 import { ProjectsComponent } from './content/projects/projects.component';
 import { ContactMeComponent } from './content/contact-me/contact-me.component';
+import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
 
 
 
@@ -46,7 +47,8 @@ const routes: Routes = [
         }
       }
     ]
-  }
+  },
+  { path: '**', component: PageNotfoundComponent }
 ]
 
 @NgModule({

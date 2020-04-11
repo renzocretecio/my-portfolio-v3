@@ -1,0 +1,74 @@
+.page-not-found {
+  color: #152238;
+  position: relative;
+}
+
+.title-404 {
+  font-size: 20rem;
+}
+
+.text-404 {
+  font-size: 2rem;
+}
+
+.btn-404 {
+  border: solid #152238 2px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #152238;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  transition: all 300ms;
+  margin-right: 10px;
+}
+
+
+.btn-404:hover {
+  background-color: #152238;
+  color: #00d8f7;
+}
+
+@media only screen and (max-width: 62rem) {
+
+  .title-404 {
+    font-size: 20vw;
+  }
+
+  .text-404 {
+    font-size: 4vw;
+  }
+
+  .btn-404 {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+  .title-404 {
+    font-size: 20vw;
+  }
+
+  .text-404 {
+    font-size: 4vw;
+  }
+
+  .btn-404 {
+    font-size: 3vw;
+  }
+
+}
+
+@media only screen and (max-width: 30rem) {
+  .title-404 {
+    font-size: 25vw;
+  }
+
+  .text-404 {
+    font-size: 6vw;
+  }
+
+  .btn-404 {
+    font-size: 4vw;
+  }
+}
