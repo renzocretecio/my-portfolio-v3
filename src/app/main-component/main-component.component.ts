@@ -15,8 +15,11 @@ export class MainComponent implements OnInit {
 
 
   burgerToggle() {
+
     $('.hamburger').click(() => {
-      $('.links-wrapper').toggleClass('open')
+      $('.btn-list').toggleClass('active')
+      $('.backdrop').toggleClass('backdrop-show')
+
     })
 
     $('.btn-list a').click(() => {
@@ -24,11 +27,13 @@ export class MainComponent implements OnInit {
     })
 
     $('.backdrop').click(() => {
-      $('.links-wrapper').toggleClass('open')
+      $('.btn-list').toggleClass('active')
+      $('.backdrop').toggleClass('backdrop-show')
     })
 
     $('.close-btn').click(() => {
-      $('.links-wrapper').toggleClass('open')
+      $('.btn-list').toggleClass('active')
+      $('.backdrop').toggleClass('backdrop-show')
     })
   }
 
