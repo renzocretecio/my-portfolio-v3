@@ -8,12 +8,18 @@
         <div class="line"></div>
       </div>
     </div>
-    <div class="btn-list">
-      <a class="text-left" type="button" [routerLink]="['/']">HOME</a>
-      <a class="text-left" type="button" [routerLink]="['/about']">ABOUT</a>
-      <a class="text-left" type="button" [routerLink]="['/projects']">RECENT WORKS</a>
-      <a class="text-left" type="button" [routerLink]="['/contact']">CONTACT</a>
+
+    <div class="links-wrapper">
+      <div class="backdrop"></div>
+      <div class="close-btn"><i class="fas fa-times"></i></div>
+      <div class="btn-list">
+        <a class="text-center" type="button" [routerLink]="['/']">HOME</a>
+        <a class="text-center" type="button" [routerLink]="['/about']">ABOUT</a>
+        <a class="text-center" type="button" [routerLink]="['/projects']">RECENT WORKS</a>
+        <a class="text-center" type="button" [routerLink]="['/contact']">CONTACT</a>
+      </div>
     </div>
+
 
 
   </nav>

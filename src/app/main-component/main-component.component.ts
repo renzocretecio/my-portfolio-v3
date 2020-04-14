@@ -16,11 +16,19 @@ export class MainComponent implements OnInit {
 
   burgerToggle() {
     $('.hamburger').click(() => {
-      $('.btn-list').toggleClass('active')
+      $('.links-wrapper').toggleClass('open')
     })
 
     $('.btn-list a').click(() => {
-      $('.btn-list').toggleClass('active')
+      $('.links-wrapper').toggleClass('open')
+    })
+
+    $('.backdrop').click(() => {
+      $('.links-wrapper').toggleClass('open')
+    })
+
+    $('.close-btn').click(() => {
+      $('.links-wrapper').toggleClass('open')
     })
   }
 
