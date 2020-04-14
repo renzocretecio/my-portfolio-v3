@@ -23,7 +23,8 @@ export class MainComponent implements OnInit {
     })
 
     $('.btn-list a').click(() => {
-      $('.links-wrapper').toggleClass('open')
+      $('.btn-list').toggleClass('active')
+      $('.backdrop').toggleClass('backdrop-show')
     })
 
     $('.backdrop').click(() => {
